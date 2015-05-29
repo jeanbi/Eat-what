@@ -1,4 +1,4 @@
-package com.orzsite.eatwhat;
+package com.orzsite.eatwhat.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.orzsite.eatwhat.R;
 
 /**
  * Created by Jimmy on 15/5/29.

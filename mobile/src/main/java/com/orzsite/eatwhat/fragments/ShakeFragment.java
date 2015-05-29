@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.orzsite.eatwhat.ConfirmDialogFragment;
+import com.orzsite.eatwhat.dialog.ConfirmDialogFragment;
 import com.orzsite.eatwhat.R;
 import com.orzsite.eatwhat.bean.Food;
 
