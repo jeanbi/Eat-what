@@ -20,5 +20,8 @@ Email: jeanbi%gmail.com (just replace % to @)
 Website: https://ubbcn.com
 ```
 
+# Fork
+Are you interested this project, fork it and create more funny features together.
+
 # License
 `GPL` License
