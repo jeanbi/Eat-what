@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@android:color/holo_blue_bright</item>
+        <!--toolbar 颜色-->
+        <item name="colorPrimary">@android:color/holo_blue_bright</item>
+        <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+</resources>

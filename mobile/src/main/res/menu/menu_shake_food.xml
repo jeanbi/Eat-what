@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShakeFoodActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/action_menu"
+        android:orderInCategory="99"
+        app:showAsAction="collapseActionView"
+        android:title="@string/action_menu" />
+</menu>

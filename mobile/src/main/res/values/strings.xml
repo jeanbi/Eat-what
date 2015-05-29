@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Eat what</string>
+
+    <string name="what_to_eat_hint">What shall i eat? Shake it for me.</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_menu">Manage menu</string>
+    <string name="vibrate_enable">Enabled</string>
+    <string name="vibrate_disable">Disabled</string>
+    <string name="vibrate_title">Enable vibrate when shake the phone.</string>
+
+    <string name="notification_title">Notify me when time arrived.</string>
+    <string name="menu_add">Add food</string>
+    <string name="menu_add_by_one">Add one food</string>
+    <string name="menu_add_by_batch">Add a batch food</string>
+
+    <string name="menu_delete">Delete food</string>
+
+    <string name="import_button">Import</string>
+    <string name="import_hint">Please input the url of menu.</string>
+    <string name="choose_it">Choose it</string>
+    <string name="changed">Is it your mind? What do you want?</string>
+    <string name="chosen">Well done.</string>
+    <string name="generic_food_done">We recommended this:%1$s(Price:%2$s)</string>
+    <string name="confirm_title">Are you sure?</string>
+    <string name="btn_confirm">Sure, Change it</string>
+    <string name="change_it">Change other</string>
+    <string name="btn_canel">No, keep it</string>
+
+    <string name="confirm_exit">Back twice to exit</string>
+
+</resources>

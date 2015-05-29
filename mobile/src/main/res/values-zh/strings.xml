@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">吃啥哟</string>
+    <string name="action_settings">设置</string>
+    <string name="what_to_eat_hint">我了去。吃啥又没主意了，摇个吧。</string>
+    <string name="vibrate_disable">禁用</string>
+    <string name="vibrate_enable">启用</string>
+    <string name="vibrate_title">摇动手机的时候震动手机</string>
+    <string name="notification_title">到点了通知我</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="menu_add">添加菜品</string>
+    <string name="menu_add_by_one">逐一添加</string>
+    <string name="menu_add_by_batch">批量添加</string>
+    <string name="menu_delete">删除菜品</string>
+    <string name="import_button">导入</string>
+    <string name="import_hint">请输入菜单的列表</string>
+    <string name="action_menu">菜单管理</string>
+    <string name="choose_it">就它了</string>
+    <string name="changed">这是你的真实想法？那你要什么？</string>
+    <string name="chosen">干得好，就这么着。</string>
+    <string name="generic_food_done">我们摇给你这个：%1$s(价格：%2$s)</string>
+    <string name="confirm_title">你确定吗？</string>
+    <string name="btn_confirm">换个吧</string>
+    <string name="btn_canel">点错了</string>
+    <string name="change_it">换一个</string>
+    <string name="confirm_exit">再按一次返回退出应用</string>
+</resources>

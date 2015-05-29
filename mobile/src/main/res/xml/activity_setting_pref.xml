@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:id="@+id/is_vibrate_enable"
+        android:key="vibratePref"
+        android:defaultValue="true"
+        android:summaryOff="@string/vibrate_disable"
+        android:summaryOn="@string/vibrate_enable"
+        android:title="@string/vibrate_title" />
+
+    <SwitchPreference
+        android:id="@+id/is_on_time"
+        android:key="notificationPref"
+        android:defaultValue="true"
+        android:title="@string/notification_title" />
+
+
+</PreferenceScreen>
