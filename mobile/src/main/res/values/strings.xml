@@ -26,6 +26,9 @@
     <string name="change_it">Change other</string>
     <string name="btn_canel">No, keep it</string>
 
+    <string name="price_format">Price:%1$.2f</string>
+    <string name="shop_format">Shop:%1$s</string>
+
     <string name="confirm_exit">Back twice to exit</string>
 
     <!--添加食品表单-->
