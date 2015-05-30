@@ -31,7 +31,7 @@ public abstract class BaseAdapter<T extends BaseBean, VH extends BaseViewHolder>
     }
 
     @Override
-    public final Object getItem(int position) {
+    public final T getItem(int position) {
         return datas.get(position);
     }
 
@@ -51,10 +51,10 @@ public abstract class BaseAdapter<T extends BaseBean, VH extends BaseViewHolder>
             vh = (VH) convertView.getTag();
         }
 
-        fillView(vh);
+        fillView(vh, position);
         return convertView;
     }
 
     protected abstract VH initView(View convertView);
-    protected abstract void fillView(VH vh);
+    protected abstract void fillView(VH vh, int position);
 }

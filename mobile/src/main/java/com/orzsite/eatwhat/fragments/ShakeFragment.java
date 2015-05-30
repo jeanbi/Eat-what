@@ -14,9 +14,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.orzsite.eatwhat.dao.DbHelper;
 import com.orzsite.eatwhat.dialog.ConfirmDialogFragment;
 import com.orzsite.eatwhat.R;
 import com.orzsite.eatwhat.bean.Food;
+
+import java.util.List;
 
 /**
  * Created by Jimmy on 15/5/29.
@@ -154,7 +157,13 @@ public class ShakeFragment extends BaseFragment {
     }
 
     private void randomFood() {
-        food = new Food();
-        //TODO 需要随机生成一个食物
+
+        DbHelper helper = new DbHelper(getActivity());
+        List<Food> tmpFoods = helper.queryFoodList();
+        int rangeMin = 0;
+        int rangeMax = tmpFoods.size() - 1;
+        int rangeIndex = (int)Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
+
+        food = tmpFoods.get(rangeIndex);
     }
 }

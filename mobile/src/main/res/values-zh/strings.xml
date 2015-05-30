@@ -24,4 +24,13 @@
     <string name="btn_canel">点错了</string>
     <string name="change_it">换一个</string>
     <string name="confirm_exit">再按一次返回退出应用</string>
+    <string name="food_name_hint">餐品名称</string>
+    <string name="food_price_hint">餐品价格</string>
+    <string name="shop_name_hint">商店名称</string>
+    <string name="save_button">添加</string>
+    <string name="create_new_shop">添加个商家</string>
+    <string name="negative_button_for_create_shop">取消</string>
+    <string name="positive_button_for_create_shop">创建</string>
+    <string name="create_food_fail">菜品添加失败</string>
+    <string name="create_food_success">菜品添加成功</string>
 </resources>

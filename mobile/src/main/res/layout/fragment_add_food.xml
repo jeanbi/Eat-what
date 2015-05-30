@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/food_name_hint" />
+
+    <EditText
+        android:id="@+id/et_food_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/food_price_hint" />
+
+    <Spinner
+        android:id="@+id/shop_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Button
+        android:id="@+id/save_button"
+        android:text="@string/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -13,7 +13,7 @@ public class ImportFragment extends BaseFragment {
 
     @Override
     protected View initFragment(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.fragment_batch_import, container);
+        return inflater.inflate(R.layout.fragment_batch_import, container, false);
     }
 
     @Override

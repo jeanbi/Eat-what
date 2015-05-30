@@ -28,4 +28,15 @@
 
     <string name="confirm_exit">Back twice to exit</string>
 
+    <!--添加食品表单-->
+    <string name="food_name_hint">Here is food name</string>
+    <string name="food_price_hint">Here is food price, etc.(12.00)</string>
+    <string name="shop_name_hint">Here is shop name</string>
+    <string name="save_button">Add it</string>
+    <string name="create_new_shop">Create new shop</string>
+    <string name="positive_button_for_create_shop">Create</string>
+    <string name="negative_button_for_create_shop">Cancel</string>
+    <string name="create_food_success">The food has created successful.</string>
+    <string name="create_food_fail">Create failed.</string>
+
 </resources>

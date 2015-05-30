@@ -11,10 +11,4 @@ public class ShopTable {
     public static final String TABLE = "shop";
     public static final String SHOP_ID = "shop_id";
     public static final String SHOP_NAME = "shop_name";
-
-    public static Shop cursorToShop(Cursor c) {
-        Shop shop = new Shop();
-
-        return shop;
-    }
 }

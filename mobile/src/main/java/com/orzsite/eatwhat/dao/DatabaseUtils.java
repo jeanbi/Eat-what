@@ -22,9 +22,51 @@ public class DatabaseUtils extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //TODO Create Shop Table
 
-        //TODO Create Food Table
+        //Create shop table
+        String CREATE_SHOP_SQL = generateShopTable();
+        db.execSQL(CREATE_SHOP_SQL);
+
+        //Create food table
+        String CREATE_FOOD_SQL = generateFoodTable();
+        db.execSQL(CREATE_FOOD_SQL);
+    }
+
+    private String generateShopTable() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("CREATE TABLE IF NOT EXISTS ");
+        builder.append(ShopTable.TABLE);
+        builder.append(" (");
+        builder.append(ShopTable.SHOP_ID);
+        builder.append(" integer primary key autoincrement,");
+        builder.append(ShopTable.SHOP_NAME);
+        builder.append(" text)");
+
+        return builder.toString();
+    }
+
+    private String generateFoodTable() {
+        StringBuilder builder =new StringBuilder();
+        builder.append("CREATE TABLE IF NOT EXISTS ");
+        builder.append(FoodTable.TABLE);
+        builder.append(" (");
+        builder.append(FoodTable.FOOD_ID);
+        builder.append(" integer primary key autoincrement,");
+        builder.append(FoodTable.FOOD_NAME);
+        builder.append(" text,");
+        builder.append(FoodTable.FOOD_PRICE);
+        builder.append(" real,");
+        builder.append(FoodTable.SHOP_ID);
+        builder.append(" integer,");
+        builder.append("FOREIGN KEY (");
+        builder.append(FoodTable.SHOP_ID);
+        builder.append(") REFERENCES ");
+        builder.append(ShopTable.TABLE);
+        builder.append("(");
+        builder.append(ShopTable.SHOP_ID);
+        builder.append("))");
+
+        return builder.toString();
     }
 
     @Override

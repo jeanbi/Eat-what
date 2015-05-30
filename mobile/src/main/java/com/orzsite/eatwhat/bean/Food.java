@@ -5,7 +5,7 @@ package com.orzsite.eatwhat.bean;
  */
 public class Food extends BaseBean {
     private String name;
-    private String price;
+    private double price;
 
     public String getName() {
         return name;
@@ -15,21 +15,31 @@ public class Food extends BaseBean {
         this.name = name;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    private String shopName;
+    private Shop shop;
 
-    public String getShopName() {
-        return shopName;
+    public Shop getShop() {
+        return shop;
     }
 
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    private int skipTimes;
+
+    public int getSkipTimes() {
+        return skipTimes;
+    }
+
+    public void setSkipTimes(int skipTimes) {
+        this.skipTimes = skipTimes;
     }
 }
