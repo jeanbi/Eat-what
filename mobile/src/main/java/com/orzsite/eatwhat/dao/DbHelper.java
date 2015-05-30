@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * copyright: Copyright(c) Jimmy Xue(jeanbi@gmail.com). All rights reserved.
+ * license: GNU General Public License 2.0
  * Created by Jimmy on 15/5/30.
  */
 public class DbHelper {

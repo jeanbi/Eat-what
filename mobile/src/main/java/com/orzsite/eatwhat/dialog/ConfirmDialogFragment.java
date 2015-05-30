@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.orzsite.eatwhat.R;
 
 /**
+ * copyright: Copyright(c) Jimmy Xue(jeanbi@gmail.com). All rights reserved.
+ * license: GNU General Public License 2.0
  * Created by Jimmy on 15/5/29.
  */
 public class ConfirmDialogFragment extends DialogFragment {

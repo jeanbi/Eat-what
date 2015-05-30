@@ -10,7 +10,11 @@ import android.widget.Toast;
 import com.orzsite.eatwhat.R;
 import com.orzsite.eatwhat.fragments.ShakeFragment;
 
-
+/**
+ * copyright: Copyright(c) Jimmy Xue(jeanbi@gmail.com). All rights reserved.
+ * license: GNU General Public License 2.0
+ * Created by Jimmy on 15/5/29.
+ */
 public class ShakeFoodActivity extends BaseActivity {
 
     private boolean willExit = false;

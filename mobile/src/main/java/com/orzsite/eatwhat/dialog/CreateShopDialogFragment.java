@@ -14,6 +14,8 @@ import com.orzsite.eatwhat.bean.Shop;
 import com.orzsite.eatwhat.dao.DbHelper;
 
 /**
+ * copyright: Copyright(c) Jimmy Xue(jeanbi@gmail.com). All rights reserved.
+ * license: GNU General Public License 2.0
  * Created by Jimmy on 15/5/30.
  */
 public class CreateShopDialogFragment extends DialogFragment {

@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.orzsite.eatwhat.R;
+import com.orzsite.eatwhat.bean.Food;
 import com.orzsite.eatwhat.bean.Shop;
 import com.orzsite.eatwhat.viewholder.BaseViewHolder;
 
@@ -15,9 +16,9 @@ import java.util.List;
  * license: GNU General Public License 2.0
  * Created by Jimmy on 15/5/30.
  */
-public class ShopAdapter extends BaseAdapter<Shop, ShopAdapter.ItemViewHolder> {
+public class FoodAdapter extends BaseAdapter<Food, FoodAdapter.ItemViewHolder> {
 
-    public ShopAdapter(Context context, int layoutRes, List<Shop> datas) {
+    public FoodAdapter(Context context, int layoutRes, List<Food> datas) {
         super(context, layoutRes, datas);
     }
     @Override
@@ -28,8 +29,8 @@ public class ShopAdapter extends BaseAdapter<Shop, ShopAdapter.ItemViewHolder> {
 
     @Override
     protected void fillView(ItemViewHolder itemViewHolder, int position) {
-        Shop shop = getItem(position);
-        itemViewHolder.getItemView().setText(shop.getName());
+        Food food = getItem(position);
+        itemViewHolder.getItemView().setText(food.getName());
     }
 
     protected class ItemViewHolder extends BaseViewHolder {
