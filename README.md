@@ -7,9 +7,15 @@ It is simple, just shake the phone, it'll give you a option to choose, you can f
 # Feature
 1. Android 2.3 above supports.
 2. Material Design supports.
-3. Create your own food list by yourself.
-4. Counting change times automatic.
-5. Alert on time.
+3. Shaking phone to get food once.
+4. Create your own food list by yourself.
+5. Counting change times automatic.
+
+# Todo
+1. Delete foods.
+2. Delete shop.
+3. UI.`very important, nothing for now.`
+4. Alert on time.
 
 # Author
 ```
