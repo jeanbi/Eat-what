@@ -12,6 +12,7 @@ import com.orzsite.eatwhat.activity.AddFoodActivity;
 import com.orzsite.eatwhat.adapter.FoodAdapter;
 import com.orzsite.eatwhat.bean.Food;
 import com.orzsite.eatwhat.dao.DbHelper;
+import com.orzsite.eatwhat.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +25,13 @@ import java.util.List;
 public class MenuFragment extends BaseFragment implements View.OnClickListener {
     private FoodAdapter adapter;
     private List<Food> foods = new ArrayList<>();
+    private GridView foodGrid;
+    private List<Food> willDeleteFoods = new ArrayList<>();
+    private DbHelper helper;
 
     @Override
     protected View initFragment(LayoutInflater inflater, ViewGroup container) {
+        helper = new DbHelper(getActivity());
         return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 
@@ -38,9 +43,20 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
         addButton.setOnClickListener(this);
         deleteButton.setOnClickListener(this);
 
-        GridView foodGrid = (GridView) view.findViewById(R.id.food_list);
+        foodGrid = (GridView) view.findViewById(R.id.food_list);
         adapter = new FoodAdapter(getActivity(), R.layout.food_item_view, foods);
         foodGrid.setAdapter(adapter);
+        adapter.setOnItemSelectedListener(new FoodAdapter.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(Food food) {
+                willDeleteFoods.add(food);
+            }
+
+            @Override
+            public void onItemUnSelected(Food food) {
+                willDeleteFoods.remove(food);
+            }
+        });
 
         bindData();
     }
@@ -53,7 +69,7 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
         if (id == R.id.add_food) {
             intent = new Intent(getActivity(), AddFoodActivity.class);
         } else if (id == R.id.delete_food) {
-            //TODO DeleteActivity implement.
+            deleteFoods();
         }
 
         if (intent != null) {
@@ -61,11 +77,35 @@ public class MenuFragment extends BaseFragment implements View.OnClickListener {
         }
     }
 
+    /**
+     * 从本地数据库中删除选中的菜品
+     * TODO 复选框的逻辑需要重新处理
+     */
+    private void deleteFoods() {
+        List<Long> ids = new ArrayList<>();
+        for (Food food : willDeleteFoods) {
+            ids.add(food.getId());
+        }
+
+        Long[] willDeleteIds = ids.toArray(new Long[0]);
+        helper.deleteFoods(willDeleteIds);
+
+        ToastUtils.showToast(getActivity(), R.string.delete_food_success);
+
+        //重新获取数据
+        bindData();
+    }
+
     private void bindData() {
-        DbHelper helper = new DbHelper(getActivity());
         foods.clear();
         List<Food> tmpFoods = helper.queryFoodList();
         foods.addAll(tmpFoods);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        bindData();
     }
 }

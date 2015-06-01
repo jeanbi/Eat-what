@@ -2,6 +2,8 @@ package com.orzsite.eatwhat.adapter;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.orzsite.eatwhat.R;
@@ -32,10 +34,32 @@ public class FoodAdapter extends BaseAdapter<Food, FoodAdapter.ItemViewHolder> {
 
     @Override
     protected void fillView(ItemViewHolder itemViewHolder, int position) {
-        Food food = getItem(position);
+        final Food food = getItem(position);
         itemViewHolder.getItemShop().setText(context.getString(R.string.shop_format, food.getShop().getName()));
         itemViewHolder.getItemName().setText(food.getName());
         itemViewHolder.getItemPrice().setText(context.getString(R.string.price_format, food.getPrice()));
+        itemViewHolder.getSelectBox().setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (itemSelectedListener != null) {
+                    if (isChecked) {
+                        itemSelectedListener.onItemSelected(food);
+                    } else {
+                        itemSelectedListener.onItemUnSelected(food);
+                    }
+                }
+            }
+        });
+    }
+
+    private OnItemSelectedListener itemSelectedListener;
+    public void setOnItemSelectedListener(OnItemSelectedListener itemSelectedListener) {
+        this.itemSelectedListener = itemSelectedListener;
+    }
+
+    public static interface OnItemSelectedListener {
+        void onItemSelected(Food food);
+        void onItemUnSelected(Food food);
     }
 
     protected class ItemViewHolder extends BaseViewHolder {
@@ -66,6 +90,14 @@ public class FoodAdapter extends BaseAdapter<Food, FoodAdapter.ItemViewHolder> {
                 itemPrice = (TextView) getViewById(R.id.tv_food_price);
             }
             return itemPrice;
+        }
+
+        private CheckBox selectBox;
+        public CheckBox getSelectBox() {
+            if (selectBox == null) {
+                selectBox = (CheckBox) getViewById(R.id.selected_box);
+            }
+            return selectBox;
         }
     }
 }

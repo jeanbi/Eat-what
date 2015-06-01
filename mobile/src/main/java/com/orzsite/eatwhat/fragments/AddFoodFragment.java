@@ -81,8 +81,9 @@ public class AddFoodFragment extends BaseFragment {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveButtonClicked();
                 saveButton.setEnabled(false);
+                saveButtonClicked();
+
             }
         });
 

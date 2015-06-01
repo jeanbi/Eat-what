@@ -8,14 +8,13 @@ The use of this app is very easy, just shake your phone, then it'll give you a o
 1. Android 2.3+ supports.
 2. Material Design.
 3. Shaking phone to get food once.
-4. Create your own food list by yourself.
+4. Manage your own food list by yourself.
 5. Counting change times automatically.
 
 # Todo
-1. Delete foods.
-2. Delete shop.
-3. UI.`very important, nothing for now.`
-4. Alert on time.
+1. Delete shop.
+2. UI.`very important, nothing for now.`
+3. Alert on time.
 
 # Author
 ```
@@ -30,4 +29,10 @@ Website: https://ubbcn.com
 Are you interested this project, fork it and create more funny features together.
 
 # License
-`GPL` License
+Copyright (C) 2015 Jimmy Xue(jeanbi@gmail.com)
+
+This program is free software: you can redistribute it and/or modify it under the terms of the `GNU General Public License` as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.

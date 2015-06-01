@@ -19,7 +19,10 @@ import com.orzsite.eatwhat.dialog.ConfirmDialogFragment;
 import com.orzsite.eatwhat.R;
 import com.orzsite.eatwhat.bean.Food;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * copyright: Copyright(c) Jimmy Xue(jeanbi@gmail.com). All rights reserved.
@@ -158,13 +161,19 @@ public class ShakeFragment extends BaseFragment {
         }
     }
 
+    /**
+     * Generate unique food by randomly.
+     */
     private void randomFood() {
 
         DbHelper helper = new DbHelper(getActivity());
         List<Food> tmpFoods = helper.queryFoodList();
         int rangeMin = 0;
         int rangeMax = tmpFoods.size() - 1;
-        int rangeIndex = (int)Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
+//        int rangeIndex = (int)Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
+
+        Random rnd = new Random();
+        int rangeIndex = rnd.nextInt(rangeMax + rangeMin);
 
         food = tmpFoods.get(rangeIndex);
     }

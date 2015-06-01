@@ -221,7 +221,7 @@ public class DbHelper {
      *
      * @param foodIds
      */
-    public void deleteFoods(int[] foodIds) {
+    public void deleteFoods(Long[] foodIds) {
         SQLiteDatabase db = utils.getWritableDatabase();
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < foodIds.length; i++) {
@@ -230,7 +230,7 @@ public class DbHelper {
                 builder.append(", ");
             }
         }
-        String deleteFoodsSql = "delete from " + FoodTable.TABLE + " where " + FoodTable.FOOD_ID + "in(" + builder.toString() + ")";
+        String deleteFoodsSql = "delete from " + FoodTable.TABLE + " where " + FoodTable.FOOD_ID + " in(" + builder.toString() + ")";
         db.execSQL(deleteFoodsSql);
     }
 

@@ -43,6 +43,11 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * HomeUpButton of toolbar status.
+     *
+     * @param enable
+     */
     protected void setHomeUpEnabled(boolean enable) {
         getSupportActionBar().setDisplayHomeAsUpEnabled(enable);
     }
@@ -73,6 +78,11 @@ public class BaseActivity extends AppCompatActivity {
         _fragment = fragment;
     }
 
+    /**
+     * The default up button action handler.
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

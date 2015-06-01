@@ -24,7 +24,17 @@ public abstract class BaseFragment extends Fragment {
         fillViews(view);
     }
 
+    /**
+     * Initialize the fragment when it entered stacks
+     * @param inflater
+     * @param container
+     * @return
+     */
     protected abstract View initFragment(LayoutInflater inflater, ViewGroup container);
 
+    /**
+     * When fragment were initialized, it could be activated.
+     * @param view
+     */
     protected abstract void fillViews(View view);
 }

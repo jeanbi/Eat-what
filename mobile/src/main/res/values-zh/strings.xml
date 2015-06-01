@@ -35,4 +35,5 @@
     <string name="create_food_success">菜品添加成功</string>
     <string name="price_format">价格：%1$.2f</string>
     <string name="shop_format">店家：%1$s</string>
+    <string name="delete_food_success">菜品删除成功</string>
 </resources>

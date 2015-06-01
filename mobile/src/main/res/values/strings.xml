@@ -42,4 +42,6 @@
     <string name="create_food_success">The food has created successful.</string>
     <string name="create_food_fail">Create failed.</string>
 
+    <string name="delete_food_success">Delete foods successful.</string>
+
 </resources>
